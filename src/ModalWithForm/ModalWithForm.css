@@ -21,15 +21,6 @@
   padding: 28px 28px;
 }
 
-.modal_type_addGarment {
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
-}
-
 .modal__close-button {
   border: none;
   background: none;
@@ -43,46 +34,9 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* .modal_close-button:hover {
-  opacity: 60%;
-} */
-
 .modal_title {
   margin: 28px 0 24px;
 }
-
-/* .modal_form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal_label {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Cabinet Grotesk";
-  color: #000000;
-} */
-
-/* .modal_input {
-  font-family: "Cabinet Grotesk";
-  margin: 8px 0px 24px;
-  width: 440px;
-  border: none;
-  border-bottom: 1px solid #000000;
-  outline: none;
-  box-sizing: border-box;
-} */
-
-.modal__button-radio {
-  cursor: pointer;
-}
-
-.modal_button-radio:checked {
-  color: #000;
-}
-
 .modal_button-submit {
   margin-top: 32px;
   width: 124px;
@@ -98,31 +52,45 @@
   line-height: 20px;
 }
 
-.form__input {
-  font-family: "Cabinet Grotesk";
-  margin: 8px 0px 24px;
-  width: 440px;
-  border: none;
-  border-bottom: 1px solid #000000;
-  outline: none;
-  box-sizing: border-box;
+.modal_labels {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-
-.form__input::placeholder {
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
-  font-weight: 700;
+.modal_label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 20px;
+}
+.modal_label::placeholder {
+  margin-top: 8px;
+  margin-bottom: 4px;
   font-size: 16px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5);
 }
-
-.form__input_label-weather {
-  margin: 0px 0px 8px 8px;
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
+.modal_input {
+  border: none;
+  max-width: 440px;
+  width: 100%;
+  padding: 8px 0 4px 0;
+  border-bottom: 1px solid black;
+}
+.modal_button-input {
+  height: 16px;
+  width: 16px;
+  gap: 8px;
+  margin: 2px 0 0;
+  cursor: pointer;
+}
+.modal_button {
+  display: flex;
+  gap: 12px;
+}
+.modal_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 34px;
 }
