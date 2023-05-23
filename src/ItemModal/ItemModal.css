@@ -1,0 +1,73 @@
+.item_modal {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.item_modal-content {
+  background-color: white;
+  position: relative;
+  align-items: center;
+  padding: 0;
+  margin-top: 106px;
+  width: 498px;
+  height: 610px;
+  border-radius: 16px;
+}
+.item_modal-description {
+  display: flex;
+  color: black;
+  padding: 0 12px 12px;
+  font-size: 20px;
+  line-height: 20px;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 14px;
+}
+.item_modal-image {
+  max-width: 498px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.Item_modal-button {
+  border: none;
+  background: none;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 457px;
+  top: 27px;
+  background-image: url(../../src/images/Itemclose.svg) center no-repeat;
+  border: 2px rgba(0, 0, 0, 0.3);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 3;
+}
+
+.item_modal-name {
+  top: 518px;
+  position: absolute;
+  height: 24px;
+  margin-left: 32px;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.item_modal-weather {
+  position: absolute;
+  height: 24px;
+  top: 554px;
+  margin-left: 32px;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}

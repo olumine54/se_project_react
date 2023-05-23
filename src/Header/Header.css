@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding: 0 20px;
+}
+
+.header_logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header_avatar-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header_date {
+  margin-left: 24px;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.header_name {
+  margin-right: 12px;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.header_button {
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.header_button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
