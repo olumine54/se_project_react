@@ -1,17 +1,12 @@
 import "./ModalWithForm.css";
+import itemcloseImage from "../../images/Itemclose.svg";
 
-const ModalWithForm = ({
-  children,
-  buttonText = "AddGarment",
-  title,
-  onClose,
-  name,
-}) => {
+const ModalWithForm = ({ children, buttonText, title, onClose, name }) => {
   return (
     <div className={`modal modal_type_${name}`}>
       <div className="modal_content">
         <img
-          src={require("../../images/Itemclose.svg").default}
+          src={itemcloseImage}
           class="modal_close-button"
           type="button"
           onClick={onClose}

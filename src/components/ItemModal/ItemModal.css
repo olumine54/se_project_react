@@ -53,7 +53,7 @@
   position: absolute;
   height: 24px;
   margin-left: 32px;
-  font-family: "Cabinet Grotesk";
+  font-family: "Cabinet Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -65,7 +65,7 @@
   height: 24px;
   top: 554px;
   margin-left: 32px;
-  font-family: "Cabinet Grotesk";
+  font-family: "Cabinet Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;

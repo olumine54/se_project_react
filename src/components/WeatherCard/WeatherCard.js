@@ -1,6 +1,6 @@
 import "./WeatherCard.css";
 
-const WeatherOptions = [
+const weatherOptions = [
   {
     url: require("../../images/day/sunny.svg").default,
     day: true,
@@ -24,16 +24,19 @@ const WeatherOptions = [
 ];
 
 const WeatherCard = ({ day, type, weatherTemp = "" }) => {
-  const imageSrc = WeatherOptions.filter((i) => {
-    return i.day === day && i.type === type;
+  const weatherOption = weatherOptions.find((option) => {
+    return option.day === day && option.type === type;
   });
-
-  const imageSrcUrl = imageSrc[0].url || "";
+  const weatherOptionUrl = weatherOption.url || "";
   return (
     <section className="weather" id="weather">
-      <div className="weather__info">{weatherTemp} F</div>
+      <div className="weather__info">{weatherTemp} °F</div>
 
-      <img src={imageSrcUrl} className="weather__image" alt="weather-image" />
+      <img
+        src={weatherOptionUrl}
+        className="weather__image"
+        alt="weather--option-image"
+      />
     </section>
   );
 };

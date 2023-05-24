@@ -34,24 +34,33 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+.modal_close-button:hover {
+  cursor: pointer;
+}
+
 .modal_title {
   margin: 0 0 24px 0;
   font-size: 16px;
-  font-family: "Cabinet Grotesk";
+  font-family: "Familjen Grotesk", sans-serif;
 }
 .modal_button-submit {
-  margin-top: 32px;
+  margin: 32px 0 0 0;
+  padding: 0;
   width: 124px;
   height: 36px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   border-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
-  font-family: "Cabinet Grotesk";
+  font-family: "Familjen Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+.modal_button-submit:hover {
+  cursor: pointer;
 }
 
 .modal_labels {
