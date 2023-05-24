@@ -7,7 +7,7 @@ const ModalWithForm = ({ children, buttonText, title, onClose, name }) => {
       <div className="modal_content">
         <img
           src={itemcloseImage}
-          class="modal_close-button"
+          className="modal_close-button"
           type="button"
           onClick={onClose}
         />
