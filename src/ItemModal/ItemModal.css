@@ -42,7 +42,7 @@
   height: 14px;
   left: 457px;
   top: 27px;
-  background-image: url(../../src/images/Itemclose.svg) center no-repeat;
+  /* background-image: url(../../src/images/Itemclose.svg) center no-repeat; */
   border: 2px rgba(0, 0, 0, 0.3);
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 3;

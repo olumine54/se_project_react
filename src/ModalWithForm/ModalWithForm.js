@@ -10,9 +10,12 @@ const ModalWithForm = ({
   return (
     <div className={`modal modal_type_${name}`}>
       <div className="modal_content">
-        <button className="modal_close-button" type="button" onClick={onClose}>
-          Close
-        </button>
+        <img
+          src={require("../images/Itemclose.svg").default}
+          class="modal_close-button"
+          type="button"
+          onClick={onClose}
+        />
         <h3 className="modal_title">{title}</h3>
         <form className="form">{children}</form>
         <button type="submit" className="modal_button-submit">

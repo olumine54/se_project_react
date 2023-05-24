@@ -21,7 +21,8 @@
   padding: 28px 28px;
 }
 
-.modal__close-button {
+.modal_close-button {
+  display: flex;
   border: none;
   background: none;
   position: absolute;
@@ -29,13 +30,14 @@
   height: 14px;
   left: 448px;
   top: 20px;
-  background-image: url(../../src/images/Itemclose.svg);
   border: 2px rgba(0, 0, 0, 0.3);
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .modal_title {
-  margin: 28px 0 24px;
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  font-family: "Cabinet Grotesk";
 }
 .modal_button-submit {
   margin-top: 32px;
