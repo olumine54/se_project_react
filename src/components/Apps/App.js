@@ -1,13 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./Header/Header";
+import Header from "../Header/Header";
 import Main from "./Main/Main";
-import Footer from "./footer/Footer";
-import ModalWithForm from "./ModalWithForm/ModalWithForm";
+import Footer from "../footer/Footer";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useEffect, useState } from "react";
-import ItemModal from "./ItemModal/ItemModal";
-import { getForecastWeather } from "./utils/weatherApi";
-import { parseWeatherData } from "./utils/weatherApi";
+import ItemModal from "../ItemModal/ItemModal";
+import { getForecastWeather } from "../utils/weatherApi";
+import { parseWeatherData } from "../utils/weatherApi";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
