@@ -73,6 +73,7 @@ function App() {
                 type="radio"
                 id="hot"
                 value="hot"
+                name="weather"
               />
               <label>Hot</label>
             </div>
@@ -82,6 +83,7 @@ function App() {
                 type="radio"
                 id="warm"
                 value="warm"
+                name="weather"
               />
               <label>Warm</label>
             </div>
@@ -91,6 +93,7 @@ function App() {
                 type="radio"
                 id="cold"
                 value="cold"
+                name="weather"
               />
               <label>Cold</label>
             </div>
