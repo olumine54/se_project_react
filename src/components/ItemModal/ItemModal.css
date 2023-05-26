@@ -48,6 +48,10 @@
   z-index: 3;
 }
 
+.Item_modal-button:hover {
+  cursor: pointer;
+}
+
 .item_modal-name {
   top: 518px;
   position: absolute;

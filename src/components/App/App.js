@@ -25,14 +25,18 @@ function App() {
     setSelectedCard(card);
   };
   useEffect(() => {
-    getForecastWeather().then((data) => {
-      const temper = parseWeatherData(data);
-      setTemp(temper);
-    });
+    getForecastWeather()
+      .then((data) => {
+        const temper = parseWeatherData(data);
+        setTemp(temper);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
-    <div>
+    <div className="page">
       <Header onCreateModal={handleCreateModal} />
       <Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
       <Footer />

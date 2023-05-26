@@ -1,3 +1,31 @@
+import sunnyDay from "../images/day/sunny.svg";
+import cloudyDay from "../images/day/cloudy.svg";
+import cloudyNight from "../images/night/cloudy.svg";
+import moonNight from "../images/night/moon.svg";
+
+export const weatherOptions = [
+  {
+    url: sunnyDay,
+    day: true,
+    type: "sunny",
+  },
+  {
+    url: cloudyDay,
+    day: true,
+    type: "cloudy",
+  },
+  {
+    url: cloudyNight,
+    day: false,
+    type: "cloudy",
+  },
+  {
+    url: moonNight,
+    day: false,
+    type: "moon",
+  },
+];
+
 export const defaultClothingItems = [
   {
     _id: 0,
