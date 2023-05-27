@@ -50,6 +50,7 @@
 
 .Item_modal-button:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .item_modal-name {
