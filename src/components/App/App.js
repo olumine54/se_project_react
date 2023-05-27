@@ -37,76 +37,78 @@ function App() {
 
   return (
     <div className="page">
-      <Header onCreateModal={handleCreateModal} />
-      <Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
-      <Footer />
-      {activeModal === "create" && (
-        <ModalWithForm
-          buttonText="Add garment"
-          title="New garment"
-          onClose={handleCloseModal}>
-          <div className="modal_labels">
-            <label className="modal_label">
-              name
-              <input
-                className="modal_input"
-                placeholder="Name"
-                type="text"
-                name="name"
-                minLength="1"
-                maxLength="30"
-              />
-            </label>
-            <label className="modal_label">
-              image
-              <input
-                className="modal_input"
-                placeholder="Image URL"
-                type="url"
-                name="link"
-                minLength="1"
-                maxLength="30"
-              />
-            </label>
-          </div>
-          <p className="modal_text">Select the weather type:</p>
-          <div className="modal_buttons">
-            <div className="modal_button">
-              <input
-                className="modal_button-input"
-                type="radio"
-                id="hot"
-                value="hot"
-                name="weather"
-              />
-              <label>Hot</label>
+      <div className="page__wrapper">
+        <Header onCreateModal={handleCreateModal} />
+        <Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
+        <Footer />
+        {activeModal === "create" && (
+          <ModalWithForm
+            buttonText="Add garment"
+            title="New garment"
+            onClose={handleCloseModal}>
+            <div className="modal_labels">
+              <label className="modal_label">
+                name
+                <input
+                  className="modal_input"
+                  placeholder="Name"
+                  type="text"
+                  name="name"
+                  minLength="1"
+                  maxLength="30"
+                />
+              </label>
+              <label className="modal_label">
+                image
+                <input
+                  className="modal_input"
+                  placeholder="Image URL"
+                  type="url"
+                  name="link"
+                  minLength="1"
+                  maxLength="30"
+                />
+              </label>
             </div>
-            <div className="modal_button">
-              <input
-                className="modal_button-input"
-                type="radio"
-                id="warm"
-                value="warm"
-                name="weather"
-              />
-              <label>Warm</label>
+            <p className="modal_text">Select the weather type:</p>
+            <div className="modal_buttons">
+              <div className="modal_button">
+                <input
+                  className="modal_button-input"
+                  type="radio"
+                  id="hot"
+                  value="hot"
+                  name="weather"
+                />
+                <label>Hot</label>
+              </div>
+              <div className="modal_button">
+                <input
+                  className="modal_button-input"
+                  type="radio"
+                  id="warm"
+                  value="warm"
+                  name="weather"
+                />
+                <label>Warm</label>
+              </div>
+              <div className="modal_button">
+                <input
+                  className="modal_button-input"
+                  type="radio"
+                  id="cold"
+                  value="cold"
+                  name="weather"
+                />
+                <label>Cold</label>
+              </div>
             </div>
-            <div className="modal_button">
-              <input
-                className="modal_button-input"
-                type="radio"
-                id="cold"
-                value="cold"
-                name="weather"
-              />
-              <label>Cold</label>
-            </div>
-          </div>
-        </ModalWithForm>
-      )}
-      {activeModal === "preview" && (
-        <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
-      )}
+          </ModalWithForm>
+        )}
+        {activeModal === "preview" && (
+          <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
+        )}
+      </div>
     </div>
   );
 }
