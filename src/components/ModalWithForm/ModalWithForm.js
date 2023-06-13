@@ -1,7 +1,16 @@
+import React from "react";
 import "./ModalWithForm.css";
 import itemcloseImage from "../../images/Itemclose.svg";
 
-const ModalWithForm = ({ children, buttonText, title, onClose, name }) => {
+const ModalWithForm = ({
+  children,
+  buttonText,
+  title,
+  onClose,
+  name,
+  onSubmit,
+  isOpen,
+}) => {
   return (
     <div className={`modal modal_type_${name}`}>
       <div className="modal_content">
@@ -12,10 +21,12 @@ const ModalWithForm = ({ children, buttonText, title, onClose, name }) => {
           onClick={onClose}
         />
         <h3 className="modal_title">{title}</h3>
-        <form className="form">{children}</form>
-        <button type="submit" className="modal_button-submit">
-          {buttonText}
-        </button>
+        <form className="form" onSubmit={onSubmit}>
+          {children}
+          <button type="submit" className="modal_button-submit">
+            {buttonText}
+          </button>
+        </form>
       </div>
     </div>
   );

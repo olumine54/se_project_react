@@ -1,3 +1,4 @@
+import React from "react";
 import "./ItemModal.css";
 import itemcloseImage from "../../images/Itemclose.svg";
 

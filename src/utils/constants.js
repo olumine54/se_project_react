@@ -26,6 +26,16 @@ export const weatherOptions = [
   },
 ];
 
+export default function _checkResponse(res) {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Error${res.status}`);
+}
+
+export const baseUrl =
+  "https://my-json-server.typicode.com/olumine54/se_project_react";
+
 export const defaultClothingItems = [
   {
     _id: 0,
