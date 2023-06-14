@@ -11,23 +11,23 @@ const DeleteConfirmModal = ({
   };
   return (
     <div className="modal">
-      <div className="modal__confirm-content">
+      <div className="modal_confirm-content">
         <div>Are you sure you want to delete this item?</div>
         <div>This action is irreversible.</div>
         <button
-          className="modal__confirm-close"
+          className="modal_confirm-close"
           onClick={handleCloseConfirmModal}>
           <img src={itemcloseImage} alt="close-button" />
         </button>
-        <div className="modal__buttons-confirm">
+        <div className="modal_buttons-confirm">
           <button
-            className="modal__button-confirm"
+            className="modal_button-confirm"
             type="button"
             onClick={() => handleDeleteItem(selectedCard._id)}>
             Yes, delete item
           </button>
           <button
-            className="modal__button-cancel"
+            className="modal_button-cancel"
             type="button"
             onClick={handleCancel}>
             Cancel

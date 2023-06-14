@@ -67,7 +67,6 @@ function App() {
   };
 
   const handleDeleteItem = (item) => {
-    console.log(item);
     ApiItem.deleteItem(item.id)
       .then(() => {
         const filteredCards = clothingItems.filter(
@@ -92,7 +91,7 @@ function App() {
         console.log(err);
       });
   }, []);
-  console.log(currentTemperatureUnit);
+
   return (
     <div className="page">
       <div className="page__wrapper">
@@ -106,14 +105,14 @@ function App() {
             <Route exact path="/">
               <Main
                 weatherTemp={temp}
-                onSelectCard={handleSelectedCard}
+                onSelectedCard={handleSelectedCard}
                 clothingItems={clothingItems}
               />
             </Route>
             <Route path="/">
               <Profile
                 items={clothingItems}
-                onSelectCard={handleSelectedCard}
+                onSelectedCard={handleSelectedCard}
               />
             </Route>
           </Switch>
@@ -131,6 +130,7 @@ function App() {
               handleCloseModal={handleCloseModal}
               onDelete={handleDeleteItem}
               handleOpenConfirmModal={handleOpenConfirmModal}
+              onClose={handleCloseModal}
             />
           )}
           {activeModal === "delete" && (

@@ -107,3 +107,60 @@
   gap: 8px;
   margin-bottom: 34px;
 }
+
+.modal_confirm-close {
+  border: none;
+  background: none;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 20px;
+  right: 30px;
+}
+
+.modal_button-close:hover {
+  cursor: pointer;
+}
+
+.modal_confirm-content {
+  position: relative;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+  width: 670px;
+  height: 280px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal_button-confirm {
+  border: none;
+  color: #ff4d00;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal_button-cancel {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Familjen Grotesk", sans-serif;
+  line-height: 24px;
+}
+
+.modal_buttons-confirm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 24px;
+}
