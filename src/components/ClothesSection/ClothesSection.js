@@ -1,3 +1,5 @@
+import "./ClothesSection.css";
+
 const ClothesSection = ({ onCreateModal }) => {
   return (
     <div className="clothes">

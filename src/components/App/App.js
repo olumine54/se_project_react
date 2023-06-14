@@ -45,7 +45,7 @@ function App() {
   //   console.log(values);
   // };
 
-  const handleSwitchChange = () => {
+  const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
@@ -98,7 +98,7 @@ function App() {
         <CurrentTemperatureUnitContext.Provider
           value={{
             currentTemperatureUnit,
-            handleSwitchChange,
+            handleToggleSwitchChange,
           }}>
           <Header onCreateModal={handleCreateModal} />
           <Switch>
