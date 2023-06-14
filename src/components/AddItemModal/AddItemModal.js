@@ -98,4 +98,4 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
     </ModalWithForm>
   );
 };
-export { AddItemModal };
+export default AddItemModal;

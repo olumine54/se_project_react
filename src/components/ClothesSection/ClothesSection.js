@@ -8,4 +8,4 @@ const ClothesSection = ({ onCreateModal }) => {
     </div>
   );
 };
-export { ClothesSection };
+export default ClothesSection;
