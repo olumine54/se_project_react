@@ -51,7 +51,7 @@ function App() {
   };
 
   const onAddItem = ({ name, link, weatherType }) => {
-    ApiItem.addItem({
+    ApiItem.addItems({
       name,
       link,
       weather: weatherType,
@@ -66,15 +66,14 @@ function App() {
       });
   };
 
-  const handleDeleteItem = (item) => {
-    ApiItem.deleteItem(item.id)
+  const handleDeleteItem = (id) => {
+    ApiItem.deleteItems(id)
       .then(() => {
-        const filteredCards = clothingItems.filter(
-          (card) => card.id !== item.id
-        );
+        const filteredCards = clothingItems.filter((card) => card._id !== id);
         console.log(filteredCards);
         setClothingItems(filteredCards);
         handleCloseModal();
+        handleCloseConfirmModal();
       })
       .catch((error) => {
         console.log(error);
@@ -113,6 +112,7 @@ function App() {
               <Profile
                 items={clothingItems}
                 onSelectedCard={handleSelectedCard}
+                onCreateModal={handleCreateModal}
               />
             </Route>
           </Switch>
