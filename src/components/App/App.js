@@ -1,7 +1,7 @@
 import React from "react";
 import "../App/App.css";
 import Header from "../Header/Header";
-import { Profile } from "../Profile/Profile";
+import Profile from "../Profile/Profile";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import { AddItemModal } from "../AddItemModal/AddItemModal";

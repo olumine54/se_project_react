@@ -30,4 +30,4 @@ const Profile = ({ items, onSelectedCard, onCreateModal }) => {
     </div>
   );
 };
-export { Profile };
+export default Profile;
