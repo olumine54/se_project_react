@@ -22,13 +22,13 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
     onAddItem({ name, link, weatherType });
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      setName("");
-      setUrl("");
-      setWeatherType("");
-    }
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     setName("");
+  //     setUrl("");
+  //     setWeatherType("");
+  //   }
+  // }, [isOpen]);
 
   return (
     <ModalWithForm

@@ -21,8 +21,8 @@ function Main({ weatherTemp, onSelectedCard, clothingItems }) {
   const currentTempString = currentTemp[currentTemperatureUnit];
 
   const weatherType = getWeatherType(weatherTemp);
-  const filteredCards = clothingItems.filter((item) => {
-    return item.weather.toLowerCase() === weatherType;
+  const filteredCards = clothingItems.filter((card) => {
+    return card.weather.toLowerCase() === weatherType;
   });
   return (
     <main className="main">
@@ -30,15 +30,15 @@ function Main({ weatherTemp, onSelectedCard, clothingItems }) {
       <section className="card_section" id="card__section">
         Today is {currentTempString} / You may want to wear:
         <div className="card_items">
-          {filteredCards.map((item) => (
+          {filteredCards.map((card) => (
             <ItemCard
-              key={item._id}
-              item={item}
+              key={card._id}
+              item={card}
               onSelectedCard={onSelectedCard}
-              name={item.name}
-              weather={item.weather}
-              id={item.id}
-              link={item.link}
+              name={card.name}
+              weather={card.weather}
+              id={card.id}
+              link={card.link}
             />
           ))}
         </div>
