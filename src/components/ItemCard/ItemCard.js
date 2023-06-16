@@ -14,7 +14,7 @@ const ItemCard = ({ item, onSelectedCard }) => {
           onClick={handleCardClick}
         />
       )}
-      <div className="card_name">{item.name}</div>
+      <div className="card_name">{item && item.name}</div>
     </div>
   );
 };

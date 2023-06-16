@@ -50,14 +50,16 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
-  const onAddItem = ({ name, link, weatherType }) => {
-    ApiItem.addItems({
+  const handleAddItem = ({ name, link, weatherType }) => {
+    const newAddItem = {
+      id: Date.now(),
       name,
       link,
-      weather: weatherType,
-    })
+      weatherType,
+    };
+    ApiItem.addItems(newAddItem)
       .then((res) => {
-        console.log(res);
+        console.log({ res });
         setClothingItems([res, ...clothingItems]);
         handleCloseModal();
       })
@@ -121,7 +123,7 @@ function App() {
             <AddItemModal
               handleCloseModal={handleCloseModal}
               isOpen={activeModal === "create"}
-              onAddItem={onAddItem}
+              onAddItem={handleAddItem}
             />
           )}
           {activeModal === "preview" && (

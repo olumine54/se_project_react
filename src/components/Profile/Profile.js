@@ -5,8 +5,6 @@ import ItemCard from "../ItemCard/ItemCard";
 import "../ItemCard/ItemCard.css";
 
 const Profile = ({ items, onSelectedCard, onCreateModal }) => {
-  console.log(items);
-
   return (
     <div className="profile">
       <div className="profile__section">
