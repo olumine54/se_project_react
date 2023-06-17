@@ -50,12 +50,12 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
-  const handleAddItem = ({ name, link, weatherType }) => {
+  const handleAddItem = ({ name, link, weather }) => {
     const newAddItem = {
       id: Date.now(),
       name,
       link,
-      weatherType,
+      weather,
     };
     ApiItem.addItems(newAddItem)
       .then((res) => {
@@ -71,7 +71,7 @@ function App() {
   const handleDeleteItem = (id) => {
     ApiItem.deleteItems(id)
       .then(() => {
-        const filteredCards = clothingItems.filter((card) => card._id !== id);
+        const filteredCards = clothingItems.filter((card) => card.id !== id);
         console.log(filteredCards);
         setClothingItems(filteredCards);
         handleCloseModal();
@@ -123,7 +123,7 @@ function App() {
             <AddItemModal
               handleCloseModal={handleCloseModal}
               isOpen={activeModal === "create"}
-              onAddItem={handleAddItem}
+              handleAddItem={handleAddItem}
             />
           )}
           {activeModal === "preview" && (
@@ -137,7 +137,7 @@ function App() {
           )}
           {activeModal === "delete" && (
             <DeleteConfirmModal
-              handleDeleteItem={() => handleDeleteItem(selectedCard._id)}
+              handleDeleteItem={() => handleDeleteItem(selectedCard.id)}
               handleCloseConfirmModal={handleCloseConfirmModal}
               selectedCard={selectedCard}
             />
