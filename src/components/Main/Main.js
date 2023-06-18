@@ -33,7 +33,7 @@ function Main({ weatherTemp, onSelectedCard, clothingItems }) {
           {filteredCards.map((card) => (
             <ItemCard
               key={card.id}
-              card={card}
+              item={card}
               onSelectedCard={onSelectedCard}
               // name={card.name}
               // weather={card.weather}

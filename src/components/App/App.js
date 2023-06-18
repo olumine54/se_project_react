@@ -41,10 +41,6 @@ function App() {
     setActiveModal("");
   };
 
-  // const onAddItem = (values) => {
-  //   console.log(values);
-  // };
-
   const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
@@ -66,7 +62,6 @@ function App() {
     deleteItems(id)
       .then(() => {
         const filteredCards = clothingItems.filter((card) => card.id !== id);
-        console.log(filteredCards);
         setClothingItems(filteredCards);
         handleCloseModal();
       })
