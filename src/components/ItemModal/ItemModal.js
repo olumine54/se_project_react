@@ -13,7 +13,7 @@ const ItemModal = ({ selectedCard, onClose, handleOpenConfirmModal }) => {
           <img src={itemcloseImage} alt="item close" />
         </button>
         <img
-          src={selectedCard.link}
+          src={selectedCard?.link || selectedCard?.imageUrl}
           className="item_modal-image"
           alt={selectedCard.name}
         />
