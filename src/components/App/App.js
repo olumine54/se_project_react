@@ -20,6 +20,7 @@ function App() {
   const [temp, setTemp] = useState(0);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
+  // const [isLoading, setIsLoading] = React.useState(false);
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -32,7 +33,6 @@ function App() {
     setActiveModal("delete");
   };
   const handleSelectedCard = (card) => {
-    debugger;
     setActiveModal("preview");
     setSelectedCard(card);
   };
@@ -69,6 +69,18 @@ function App() {
         console.log(error);
       });
   };
+
+  //   useEffect(() => {
+  //     const closeByEscape = (e) => {
+  //       if (e.key === 'Escape') {
+  //         handleCloseModal();
+  //       }
+  //     }
+
+  //     document.addEventListener('keydown', closeByEscape)
+
+  //     return () => document.removeEventListener('keydown', closeByEscape)
+  // }, [])
 
   useEffect(() => {
     getForecastWeather()

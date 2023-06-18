@@ -22,14 +22,6 @@ const AddItemModal = ({ handleCloseModal, handleAddItem, isOpen }) => {
     handleAddItem({ name, link, weather: weatherType });
   };
 
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     setName("");
-  //     setUrl("");
-  //     setWeatherType("");
-  //   }
-  // }, [isOpen]);
-
   return (
     <ModalWithForm
       buttonText="Add garment"

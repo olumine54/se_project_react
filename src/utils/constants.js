@@ -33,9 +33,9 @@ export default function _checkResponse(res) {
   return Promise.reject(`Error${res.status}`);
 }
 
-// export const baseUrl =
-//   "https://my-json-server.typicode.com/olumine54/se_project_react";
-export const baseUrl = "http://localhost:3001";
+export const baseUrl =
+  "https://my-json-server.typicode.com/olumine54/se_project_react";
+//export const baseUrl = "http://localhost:3001";
 
 export const latitude = 44.34;
 export const longitude = 10.99;
