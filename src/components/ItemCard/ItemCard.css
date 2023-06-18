@@ -44,7 +44,7 @@
   margin: 0;
   display: flex;
   flex-flow: row wrap;
-  gap: 0 17px;
+  gap: 13px;
 }
 
 .cards {

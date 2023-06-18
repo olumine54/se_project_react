@@ -2,8 +2,8 @@
   display: flex;
   font-size: 16px;
   font-family: "Familjen Grotesk", sans-serif;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 20px;
+  padding: 68px 0 0 0;
 }
 
 .clothes_title {
