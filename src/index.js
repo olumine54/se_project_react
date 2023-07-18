@@ -5,6 +5,16 @@ import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 
+// const http = require("http");
+
+// const server = http.createServer((request, response) => {
+//   console.log("The response is here!");
+//   console.log(request);
+//   console.log(response);
+// });
+
+// server.listen(3000);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

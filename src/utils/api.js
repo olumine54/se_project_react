@@ -2,6 +2,7 @@ import { baseUrl } from "./constants";
 import _checkResponse from "./constants";
 
 function getItems() {
+  console.log(12313);
   return fetch(`${baseUrl}/items`).then(_checkResponse);
 }
 

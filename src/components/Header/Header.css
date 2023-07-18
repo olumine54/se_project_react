@@ -42,3 +42,7 @@
   cursor: pointer;
   opacity: 0.6;
 }
+
+.header_placeholder {
+  border-radius: 50%;
+}
