@@ -112,3 +112,11 @@
   color: #ff4d00;
   cursor: pointer;
 }
+
+.item_delete-button_visible {
+  display: block;
+}
+
+.item_delete-button_hidden {
+  display: block;
+}

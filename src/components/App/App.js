@@ -144,7 +144,12 @@ function App() {
               currentTemperatureUnit,
               handleToggleSwitchChange,
             }}>
-            <Header onCreateModal={handleCreateModal} loggedIn={loggedIn} />
+            <Header
+              onCreateModal={handleCreateModal}
+              loggedIn={loggedIn}
+              onRegisterModal={() => setActiveModal("register")}
+              onLogInModal={() => setActiveModal("login")}
+            />
             <Switch>
               <Route exact path="/">
                 <Main

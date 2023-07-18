@@ -2,7 +2,6 @@ import { baseUrl } from "./constants";
 import _checkResponse from "./constants";
 
 function getItems() {
-  console.log(12313);
   return fetch(`${baseUrl}/items`).then(_checkResponse);
 }
 
@@ -27,5 +26,23 @@ function deleteItems(item) {
       "Content-Type": "application/json",
     },
   }).then(_checkResponse);
+
+  // function addCardLike(itemId, ) {
+  //   return fetch(`${baseUrl}/likes/${itemId}`, {
+  //     method: "PUT",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }).then(_checkResponse);
+  // }
+
+  // function removeCardLike(itemId) {
+  //   return fetch(`${baseUrl}/likes/${itemId}`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }).then(_checkResponse);
+  // }
 }
 export { getItems, addItems, deleteItems };

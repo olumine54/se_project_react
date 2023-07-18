@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const LoginModal = ({ isOpen, onClose, handleSignIn }) => {
+const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +14,7 @@ const LoginModal = ({ isOpen, onClose, handleSignIn }) => {
     };
     handleSignIn(user);
     console.log(user);
-    onClose();
+    handleCloseModal();
   }
 
   function handleEmailChange(e) {
@@ -36,7 +36,7 @@ const LoginModal = ({ isOpen, onClose, handleSignIn }) => {
     <ModalWithForm
       buttonText="Log in"
       title="Log in"
-      onClose={onClose}
+      onClose={handleCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}>
       <div className="modal_labels">
@@ -45,8 +45,8 @@ const LoginModal = ({ isOpen, onClose, handleSignIn }) => {
           <input
             className="modal_input"
             placeholder="Name"
-            type="text"
-            name="Email"
+            type="email"
+            name="email"
             minLength="1"
             maxLength="3000"
             onChange={handleEmailChange}
@@ -57,8 +57,8 @@ const LoginModal = ({ isOpen, onClose, handleSignIn }) => {
           <input
             className="modal_input"
             placeholder="password"
-            type="url"
-            name="link"
+            type="password"
+            name="password"
             minLength="1"
             onChange={handlePasswordChange}
           />

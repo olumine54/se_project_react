@@ -3,11 +3,11 @@ import itemcloseImage from "../../images/Itemclose.svg";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext ";
 import { useContext } from "react";
 
-const ItemModal = ({ selectedCard, onClose }) => {
+const ItemModal = ({ selectedCard, onClose, handleDeleteItem }) => {
   const currentUser = useContext(CurrentUserContext);
   const isOwn = selectedCard.owner === currentUser._id;
-  const itemDeleteButtonClassName = `item__delete-button ${
-    isOwn ? "item__delete-button_visible" : "item__delete-button_hidden"
+  const itemDeleteButtonClassName = `item_button-delete ${
+    isOwn ? "item_delete-button_visible" : "item_delete-button_hidden"
   }`;
 
   return (
@@ -30,8 +30,8 @@ const ItemModal = ({ selectedCard, onClose }) => {
           weather type: {selectedCard.weather}
         </div>
         <button
-          className="item_button-delete"
-          onClick={itemDeleteButtonClassName}>
+          className={itemDeleteButtonClassName}
+          onClick={handleDeleteItem}>
           Delete item
         </button>
       </div>

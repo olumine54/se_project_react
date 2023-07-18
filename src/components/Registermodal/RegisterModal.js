@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const RegisterModal = ({ isOpen, onClose, handleSignUp }) => {
+const RegisterModal = ({ isOpen, handleCloseModal, handleSignUp }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,7 +49,7 @@ const RegisterModal = ({ isOpen, onClose, handleSignUp }) => {
     <ModalWithForm
       buttonText="Next"
       title="Sign up"
-      onClose={onClose}
+      onClose={handleCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}>
       <div className="modal_labels">
@@ -58,11 +58,11 @@ const RegisterModal = ({ isOpen, onClose, handleSignUp }) => {
           <input
             className="modal_input"
             placeholder="Email"
-            type="text"
+            type="email"
             name="email"
             minLength="1"
-            maxLength="30"
-            value={name}
+            maxLength="3000"
+            value={email}
             onChange={handleEmailChange}
           />
         </label>
@@ -71,7 +71,7 @@ const RegisterModal = ({ isOpen, onClose, handleSignUp }) => {
           <input
             className="modal_input"
             placeholder="password"
-            type="url"
+            type="password"
             name="password"
             minLength="1"
             onChange={handlePasswordChange}
@@ -96,7 +96,7 @@ const RegisterModal = ({ isOpen, onClose, handleSignUp }) => {
             className="modal_input"
             placeholder="Avatar URL"
             type="url"
-            name="avatar URL"
+            name="url"
             minLength="1"
             onChange={handleAvatarChange}
           />
