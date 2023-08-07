@@ -5,44 +5,50 @@ function getItems() {
   return fetch(`${baseUrl}/items`).then(_checkResponse);
 }
 
-function addItems({ name, weather, link }) {
+function addItems({ name, weather, imageUrl }, token) {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name,
       weather,
-      link,
+      imageUrl,
     }),
   }).then(_checkResponse);
 }
 
-function deleteItems(item) {
-  return fetch(`${baseUrl}/items/${item}`, {
+function deleteItems({ id }, token) {
+  return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
     },
   }).then(_checkResponse);
-
-  // function addCardLike(itemId, ) {
-  //   return fetch(`${baseUrl}/likes/${itemId}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   }).then(_checkResponse);
-  // }
-
-  // function removeCardLike(itemId) {
-  //   return fetch(`${baseUrl}/likes/${itemId}`, {
-  //     method: "DELETE",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   }).then(_checkResponse);
-  // }
 }
-export { getItems, addItems, deleteItems };
+
+function addCardLike({ id }, token) {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ id }),
+  }).then(_checkResponse);
+}
+
+function removeCardLike({ id }, token) {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ id }),
+  }).then(_checkResponse);
+}
+export { getItems, addItems, deleteItems, removeCardLike, addCardLike };

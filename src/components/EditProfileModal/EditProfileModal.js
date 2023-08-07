@@ -1,28 +1,38 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext ";
 
-const EditProfileModal = ({ currentUser, onClose }) => {
+const EditProfileModal = ({ onClose, onEditProfile }) => {
+  const currentUser = useContext(CurrentUserContext);
   const [name, setName] = useState(currentUser.name);
-  const [avatarURL, setAvatarURL] = useState(currentUser.avatar);
+  const [avatar, setAvatar] = useState(currentUser.avatar);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
 
   const handleAvatarURLChange = (event) => {
-    setAvatarURL(event.target.value);
+    setAvatar(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onEditProfile({ name, avatar });
   };
+
+  useEffect(() => {
+    if (currentUser) {
+      setName(currentUser.name);
+      setAvatar(currentUser.avatar);
+    }
+  }, [currentUser]);
 
   return (
     <ModalWithForm
       buttonText="Save change"
       title="Change profile data"
       onClose={onClose}
-      isOpen={isOpen}
       onSubmit={handleSubmit}>
       <div className="modal_labels">
         <label className="modal_label">

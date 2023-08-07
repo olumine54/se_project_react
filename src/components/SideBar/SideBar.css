@@ -1,22 +1,68 @@
-.sidebar {
+.sidebar_profile {
   display: flex;
-  flex-flow: row;
-  align-self: flex-start;
-  flex-wrap: nowrap;
-  max-width: 100%;
+  flex-direction: column;
 }
 
-.sidebar_name {
-  font-family: "Familjen Grotesk", sans-serif;
-  font-size: 20px;
-  margin: 0;
-  padding: 47px 0 0 0;
-  align-self: center;
+.sidebar_info {
+  width: 336px;
+  height: 56px;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar_avatar {
-  width: 56px;
   height: 56px;
-  padding: 47px 16px 0 40px;
-  align-self: center;
+  width: 56px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  margin: 0 16px 0 0;
+}
+
+.sidebar_note {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px 0 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.sidebar_name {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar_button {
+  height: 25px;
+  border: none;
+  background-color: #f3f3f3;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: start;
+  padding: 0;
+}
+
+.sidebar_button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.sidebar_edit {
+  margin: 24px 0 0 0;
+  width: 201px;
+  background-color: white;
+}
+
+.sidebar_logout {
+  margin: 8px 0 0 0;
+  width: 80px;
+  background-color: white;
 }

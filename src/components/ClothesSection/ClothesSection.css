@@ -1,36 +1,39 @@
 .clothes {
   display: flex;
-  font-size: 16px;
-  font-family: "Familjen Grotesk", sans-serif;
-  gap: 20px;
-  padding: 68px 0 0 0;
+  flex-direction: column;
+  margin-top: 17px;
+}
+
+.clothe_subcontainer {
+  display: flex;
+  flex-direction: row;
 }
 
 .clothes_title {
-  font-size: 20px;
   margin: 0;
-  align-self: center;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .clothes_button {
-  line-height: 25px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  font-family: "Familjen Grotesk", sans-serif;
+  margin: 0 0 2px 20px;
   color: rgba(0, 0, 0, 0.6);
+  border: none;
+  background-color: white;
   padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.6;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
-}
-
-.clothes_button:hover {
-  color: rgba(0, 0, 0, 0.3);
-  transform: scale(105%);
 }
 
 .clothes_card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 18px;
+  grid-row: 1;
+  grid-column: 2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 17px;
+  row-gap: 20px;
 }

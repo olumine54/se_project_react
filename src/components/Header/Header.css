@@ -30,6 +30,13 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.header_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
 .header_button {
   margin-right: 20px;
   background-color: transparent;
@@ -46,3 +53,13 @@
 .header_placeholder {
   border-radius: 50%;
 }
+
+/* .header_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+} */

@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { Link } from "react-router-dom";
 
 const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
   const [email, setEmail] = useState("");
@@ -50,6 +51,7 @@ const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
             minLength="1"
             maxLength="3000"
             onChange={handleEmailChange}
+            required
           />
         </label>
         <label className="modal_label">
@@ -61,9 +63,13 @@ const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
             name="password"
             minLength="1"
             onChange={handlePasswordChange}
+            required
           />
         </label>
       </div>
+      <Link to="/signup" className="modal__link">
+        or Register
+      </Link>
     </ModalWithForm>
   );
 };

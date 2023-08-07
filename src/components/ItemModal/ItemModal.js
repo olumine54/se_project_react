@@ -9,7 +9,7 @@ const ItemModal = ({ selectedCard, onClose, handleDeleteItem }) => {
   const itemDeleteButtonClassName = `item_button-delete ${
     isOwn ? "item_delete-button_visible" : "item_delete-button_hidden"
   }`;
-
+  console.log(selectedCard._id);
   return (
     <div className="item_modal">
       <div className="item_modal-content">
@@ -31,7 +31,7 @@ const ItemModal = ({ selectedCard, onClose, handleDeleteItem }) => {
         </div>
         <button
           className={itemDeleteButtonClassName}
-          onClick={handleDeleteItem}>
+          onClick={() => handleDeleteItem(selectedCard._id)}>
           Delete item
         </button>
       </div>

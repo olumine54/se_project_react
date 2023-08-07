@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { Link } from "react-router-dom";
 
 const RegisterModal = ({ isOpen, handleCloseModal, handleSignUp }) => {
   const [name, setName] = useState("");
@@ -102,6 +103,9 @@ const RegisterModal = ({ isOpen, handleCloseModal, handleSignUp }) => {
           />
         </label>
       </div>
+      <Link to="/signin" className="modal__link">
+        or Login
+      </Link>
     </ModalWithForm>
   );
 };
