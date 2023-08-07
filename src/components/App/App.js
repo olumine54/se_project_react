@@ -101,7 +101,6 @@ function App() {
     deleteItems({ id }, token)
       .then(() => {
         const filteredCards = clothingItems.filter((card) => {
-          console.log(card, id);
           return card._id !== id;
         });
 
