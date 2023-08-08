@@ -45,6 +45,7 @@ const EditProfileModal = ({ onClose, onEditProfile }) => {
             minLength="1"
             maxLength="3000"
             onChange={handleNameChange}
+            value={currentUser.name}
           />
         </label>
         <label className="modal_label">
@@ -56,6 +57,7 @@ const EditProfileModal = ({ onClose, onEditProfile }) => {
             name="link"
             minLength="1"
             onChange={handleAvatarURLChange}
+            value={currentUser.avatar}
           />
         </label>
       </div>

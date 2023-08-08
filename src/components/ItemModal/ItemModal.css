@@ -95,9 +95,9 @@
 }
 
 .item_delete-button_visible {
-  display: block;
+  visibility: visible;
 }
 
 .item_delete-button_hidden {
-  display: block;
+  visibility: hidden;
 }

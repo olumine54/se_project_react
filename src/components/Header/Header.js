@@ -26,7 +26,7 @@ const Header = ({
     <header className="header">
       <div className="header_logo">
         <div>
-          <Link exact to="/">
+          <Link to="/">
             <img src={logoImage} alt="logo" />
           </Link>
         </div>
