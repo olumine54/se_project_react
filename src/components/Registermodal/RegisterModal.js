@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { Link } from "react-router-dom";
 
-const RegisterModal = ({ isOpen, handleCloseModal, handleSignUp }) => {
+const RegisterModal = ({
+  isOpen,
+  handleCloseModal,
+  handleSignUp,
+  handleToggleModal,
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
