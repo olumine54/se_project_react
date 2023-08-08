@@ -6,7 +6,7 @@ import likeActive from "../../images/likeActive.svg";
 
 const ItemCard = ({ item, onSelectedCard, onCardLike, isLoggedIn }) => {
   const currentUser = useContext(CurrentUserContext);
-  const isLiked = item.likes.some((user) => user._id === currentUser?._id);
+  const isLiked = item.likes.some((userId) => userId === currentUser?._id);
 
   const handleLike = () => {
     onCardLike(item?._id, isLiked);

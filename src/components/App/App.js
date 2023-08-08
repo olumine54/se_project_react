@@ -27,7 +27,7 @@ import LoginModal from "../loggedIn/LoginModal";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext ";
 import ProtectedRoute from "../Middlewear/ProtectedRoute";
 import { EditProfileModal } from "../EditProfileModal/EditProfileModal";
-import * as auth from "../Middlewear/auth";
+import * as auth from "../../utils/auth";
 //import NavBar from "./NavBar";
 
 function App() {
@@ -206,7 +206,7 @@ function App() {
           .then((res) => {
             setClothingItems(res);
           })
-          .catch(() => console.log("Error!"));
+          .catch((err) => console.log("Error:", err));
       })
       .catch((err) => {
         console.log(err);

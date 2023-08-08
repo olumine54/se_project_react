@@ -1,5 +1,5 @@
-import { baseUrl } from "../../utils/constants";
-import _checkResponse from "../../utils/constants";
+import { baseUrl } from "./constants";
+import _checkResponse from "./constants";
 export const signUp = ({ name, avatar, password, email }) => {
   return fetch(`${baseUrl}/signup`, {
     method: "POST",

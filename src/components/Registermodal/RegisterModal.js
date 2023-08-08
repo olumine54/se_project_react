@@ -81,6 +81,7 @@ const RegisterModal = ({
             name="password"
             minLength="1"
             onChange={handlePasswordChange}
+            value={password}
           />
         </label>
         <label className="modal_label">
@@ -105,6 +106,7 @@ const RegisterModal = ({
             name="url"
             minLength="1"
             onChange={handleAvatarChange}
+            value={avatar}
           />
         </label>
       </div>

@@ -1,12 +1,16 @@
 import { baseUrl } from "./constants";
 import _checkResponse from "./constants";
 
+function request(url, options) {
+  return fetch(url, options).then(_checkResponse);
+}
+
 function getItems() {
-  return fetch(`${baseUrl}/items`).then(_checkResponse);
+  return request(`${baseUrl}/items`);
 }
 
 function addItems({ name, weather, imageUrl }, token) {
-  return fetch(`${baseUrl}/items`, {
+  return request(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,38 +21,38 @@ function addItems({ name, weather, imageUrl }, token) {
       weather,
       imageUrl,
     }),
-  }).then(_checkResponse);
+  });
 }
 
 function deleteItems({ id }, token) {
-  return fetch(`${baseUrl}/items/${id}`, {
+  return request(`${baseUrl}/items/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     },
-  }).then(_checkResponse);
+  });
 }
 
 function addCardLike({ id }, token) {
-  return fetch(`${baseUrl}/items/${id}/likes`, {
+  return request(`${baseUrl}/items/${id}/likes`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ id }),
-  }).then(_checkResponse);
+  });
 }
 
 function removeCardLike({ id }, token) {
-  return fetch(`${baseUrl}/items/${id}/likes`, {
+  return request(`${baseUrl}/items/${id}/likes`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ id }),
-  }).then(_checkResponse);
+  });
 }
 export { getItems, addItems, deleteItems, removeCardLike, addCardLike };

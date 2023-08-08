@@ -1,6 +1,7 @@
 import React from "react";
 import "./ModalWithForm.css";
 import itemcloseImage from "../../images/Itemclose.svg";
+import { useEscape } from "../useEscape";
 
 const ModalWithForm = ({
   children,
@@ -11,6 +12,7 @@ const ModalWithForm = ({
   onSubmit,
   isOpen,
 }) => {
+  useEscape(onClose);
   return (
     <div className={`modal modal_type_${name}`}>
       <div className="modal_content">
@@ -19,7 +21,7 @@ const ModalWithForm = ({
           className="modal_close-button"
           type="button"
           onClick={onClose}
-          alt="item close image"
+          alt="item close"
         />
         <h3 className="modal_title">{title}</h3>
         <form className="form" onSubmit={onSubmit}>

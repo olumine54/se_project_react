@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Header.css";
 import logoImage from "../../images/logo.svg";
-import avatarImage from "../../images/avatar.svg";
+//import avatarImage from "../../images/avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext ";

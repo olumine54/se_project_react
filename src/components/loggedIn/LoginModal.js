@@ -15,7 +15,6 @@ const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
     };
     handleSignIn(user);
     console.log(user);
-    handleCloseModal();
   }
 
   function handleEmailChange(e) {
@@ -51,6 +50,7 @@ const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
             minLength="1"
             maxLength="3000"
             onChange={handleEmailChange}
+            value={email}
             required
           />
         </label>
@@ -63,6 +63,7 @@ const LoginModal = ({ isOpen, handleCloseModal, handleSignIn }) => {
             name="password"
             minLength="1"
             onChange={handlePasswordChange}
+            value={password}
             required
           />
         </label>
