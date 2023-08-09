@@ -36,7 +36,7 @@ function App() {
   const [temp, setTemp] = useState(0);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
-  const [currentUser, setCurrentUser] = useState("");
+  const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [token, setToken] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
@@ -52,9 +52,6 @@ function App() {
     setActiveModal("edit");
   };
 
-  const handleCloseConfirmModal = () => {
-    setActiveModal("");
-  };
   const handleOpenConfirmModal = () => {
     setActiveModal("delete");
   };
@@ -285,9 +282,9 @@ function App() {
             {activeModal === "delete" && (
               <DeleteConfirmModal
                 handleDeleteItem={handleDeleteItem}
-                handleCloseConfirmModal={handleCloseConfirmModal}
+                handleCloseModal={handleCloseModal}
                 selectedCard={selectedCard}
-                handleCancel={handleCloseConfirmModal}
+                handleCancel={handleCloseModal}
               />
             )}
             {activeModal === "edit" && (

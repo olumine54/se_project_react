@@ -1,7 +1,7 @@
 import React from "react";
 import "./ModalWithForm.css";
 import itemcloseImage from "../../images/Itemclose.svg";
-import { useEscape } from "../useEscape";
+import { useEscape } from "../../hook/useEscape";
 
 const ModalWithForm = ({
   children,

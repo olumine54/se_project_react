@@ -55,4 +55,11 @@ function removeCardLike({ id }, token) {
     body: JSON.stringify({ id }),
   });
 }
-export { getItems, addItems, deleteItems, removeCardLike, addCardLike };
+export {
+  getItems,
+  addItems,
+  deleteItems,
+  removeCardLike,
+  addCardLike,
+  request,
+};

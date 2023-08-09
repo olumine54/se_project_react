@@ -2,6 +2,7 @@ import "./ItemModal.css";
 import itemcloseImage from "../../images/Itemclose.svg";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext ";
 import { useContext } from "react";
+import { useEscape } from "../../hook/useEscape";
 
 const ItemModal = ({ selectedCard, onClose, handleDeleteItem }) => {
   const currentUser = useContext(CurrentUserContext);
@@ -10,6 +11,7 @@ const ItemModal = ({ selectedCard, onClose, handleDeleteItem }) => {
     isOwn ? "item_delete-button_visible" : "item_delete-button_hidden"
   }`;
   console.log(selectedCard._id);
+  useEscape(onClose);
   return (
     <div className="item_modal">
       <div className="item_modal-content">
