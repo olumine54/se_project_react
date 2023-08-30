@@ -33,7 +33,12 @@ export default function _checkResponse(res) {
   return Promise.reject(`Error${res.status}`);
 }
 
-export const baseUrl = "http://localhost:3001";
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "deployed-backend-url"
+    : "http://localhost:3001";
+
+//deployed-backend-url is a URL to your deployed back end
 //export const baseUrl = "http://localhost:3001";
 
 export const latitude = 44.34;

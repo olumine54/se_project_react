@@ -74,10 +74,12 @@
   font-size: 16px;
   font-family: "Familjen Grotesk", sans-serif;
   color: #fff;
-  width: 124px;
+  width: 56px;
   height: 36px;
   text-align: center;
-  line-height: 20px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_button-submit:hover {
@@ -199,8 +201,8 @@
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
   position: relative;
-  left: 105px;
-  top: 70px;
+  left: 70px;
+  top: 60px;
   font-size: 16px;
 }
 .model_label-container {
