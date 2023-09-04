@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && scp -r ./build/* olumine54@34.125.242.236:/home/olumine54/frontend"
   },
-  "homepage": "https://www.ofalade.selfip.tk/",
+  "homepage": "https://www.ofalade.selfip.tk",
   "eslintConfig": {
     "extends": [
       "react-app",
