@@ -35,7 +35,7 @@ export default function _checkResponse(res) {
 
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://www.selfip.tk"
+    ? "https://www.ofalade.selfip.tk"
     : "http://localhost:3001";
 
 export const latitude = 44.34;
