@@ -38,9 +38,6 @@ export const baseUrl =
     ? "https://www.selfip.tk"
     : "http://localhost:3001";
 
-//deployed-backend-url is a URL to your deployed back end
-//export const baseUrl = "http://localhost:3001";
-
 export const latitude = 44.34;
 export const longitude = 10.99;
 export const APIkey = "87dca1eddcea29b389dfb0be2418219f";
