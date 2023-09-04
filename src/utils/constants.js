@@ -35,7 +35,7 @@ export default function _checkResponse(res) {
 
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "deployed-backend-url"
+    ? "https://www.selfip.tk"
     : "http://localhost:3001";
 
 //deployed-backend-url is a URL to your deployed back end
